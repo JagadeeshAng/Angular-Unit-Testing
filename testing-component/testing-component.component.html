@@ -1,0 +1,26 @@
+<!-- <p>testing-component works!</p> -->
+ <div class="row">
+   <div class="col-6">
+    <div class="row">
+      <div class="col-4">
+        <input type="text" class="form-control" [(ngModel)]="num1" placeholder="Number1">
+      </div>
+      <div class="col-4">
+        <input type="text" class="form-control" [(ngModel)]="num2" placeholder="Number2">
+      </div>
+    </div>
+    <div class="row">
+     <div class="col-3">
+      <input type="text" class="form-control" [(ngModel)]="result" placeholder="Result">
+     </div>
+    </div>
+   </div>
+ </div>
+ <div class="row pt-3">
+  <div class="col-4">
+    <button class="btn btn-success" (click)="onAdd()">Add</button>
+  </div>
+  <div class="col-4">
+    <button class="btn btn-success" (click)="getAddition()">Add By Fun</button>
+  </div>
+ </div>
