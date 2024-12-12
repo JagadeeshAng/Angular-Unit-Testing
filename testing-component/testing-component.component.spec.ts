@@ -65,4 +65,44 @@ fdescribe('TestingComponentComponent', () => {
   expect(custService.addTwoNumbers(component.num1, component.num2)).toBe(18);
   expect(component.result).toBe(18);
   })
+
+  it("check if number is  odd", () => {
+     component.num1 = 3;
+     component.getEvenOdd();
+     component.isEven = component.checkNumEvenOdd(component.num1);
+     expect(component.isEven).toBeFalse();
+  });
+  it("Check if number is even", () => {
+    component.num1 = 2;
+    component.getEvenOdd();
+    component.isEven = component.checkNumEvenOdd(component.num1);
+    expect(component.isEven).toBeTrue();
+  });
+  it("Should even condition for checkNumEvenOdd for False ", () => {
+    const num = 3;
+    const result = component.checkNumEvenOdd(num);
+    expect(result).toBeFalse();
+  });
+  it("Should even condition for checkNumEvenOdd for True", () => {
+    const num = 2;
+     const result = component.checkNumEvenOdd(num);
+     expect(result).toBeTrue();
+  });
+
+  it("Should check if num Exist", () => {
+    component.rollNoList = [1,2,4];
+    const isExist = component.checkIfNumExist(2);
+    expect(isExist).toBeTrue();
+  });
+  it("Should check if num doesnot  Exist", () => {
+    component.rollNoList = [1,2,4];
+    const isExist = component.checkIfNumExist(3);
+    expect(isExist).toBeFalse();
+  });
+
+  it("Should get sum of Array Elements in the array", () => {
+    const arr = [1,2,3];
+    const result = component.getSumOfNo(arr);
+    expect(result).toBe(6);
+  })
 });

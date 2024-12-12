@@ -42,4 +42,21 @@ checkNumEvenOdd(num: number) {
     return false;
   }
 }
+
+checkIfNumExist(num: number) {
+  const isExist = this.rollNoList.find(m => m == num);
+  if(isExist == undefined) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+getSumOfNo(numArray:number []) {
+let result = 0;
+for(let index = 0; index < numArray.length; index++){
+result = result + numArray[index];
+}
+return result;
+}
 }
